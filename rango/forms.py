@@ -22,7 +22,7 @@ class PageForm(forms.ModelForm):
     class Meta:
         model = Page
         fields = ('title', 'url', 'views')
-    exclude = ('category',)
+        exclude = ('category',)
 
     def clean(self):
         cleaned_data = self.cleaned_data
