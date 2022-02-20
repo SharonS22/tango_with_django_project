@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title_block %}
-  About Rango
+    About Rango
 {% endblock %}
 
 {% block body_block %}
@@ -12,6 +12,7 @@
         <strong>This tutorial has been put together by Sharon</strong><br />
     </div>
     <div>
+        <p>Visits: {{ visits }}</p>
         <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" /> 
         <img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a Cat" />
     </div>
