@@ -10,18 +10,18 @@
 {% endblock %}
 
 {% block body_block %}
-        {% if page %}
-            <h1>{{ page.title }}</h1>
-            {% if categories %}
-            <ul>
-                {% for category in categories %}
-                <li><a href="{{ category.url }}">{{ category.name }}</a></li>
-                {% endfor %}
-            </ul>
-            {% else %}
-            <strong>No categories currently in page.</strong>
-            {% endif %}
+    {% if page %}
+        <h1>{{ page.title }}</h1>
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <li><a href="{{ category.url }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
         {% else %}
-            The specified page does not exist.
+        <strong>No categories currently in page.</strong>
         {% endif %}
+    {% else %}
+        The specified page does not exist.
+    {% endif %}
 {% endblock %}
